@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Samsung Galaxy S26 Ultra – Dubai Edition</title>
+
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1886492678709491');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1886492678709491&ev=PageView&noscript=1"/></noscript>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cyan:#00F5FF;--cyan-dim:#00C4CC;--cyan-dark:#007A80;
+  --navy:#020B18;--navy-mid:#061525;--navy-card:#091D2E;--navy-border:#0D2E46;
+  --ice:#E8F8FF;--silver:#8BAABB;--red:#FF3B5C;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--navy);color:var(--ice);font-family:'DM Sans',sans-serif;max-width:480px;margin:0 auto;overflow-x:hidden;}
+
+/* TIMER */
+.timer-banner{background:#061A2E;border-bottom:1px solid var(--cyan-dark);text-align:center;padding:10px 16px;position:sticky;top:0;z-index:999;box-shadow:0 0 30px rgba(0,245,255,0.15);}
+.timer-label{font-family:'Orbitron',monospace;font-size:9px;color:var(--silver);margin-bottom:6px;letter-spacing:3px;}
+#countdown{display:inline-flex;gap:4px;align-items:center;}
+.time-block{background:rgba(0,245,255,0.07);border:1px solid var(--cyan-dark);padding:4px 8px;border-radius:3px;font-size:22px;font-weight:900;min-width:44px;color:var(--cyan);text-shadow:0 0 12px var(--cyan);font-family:'Orbitron',monospace;}
+.time-lbl{font-size:7px;letter-spacing:1px;color:var(--silver);display:block;font-family:'DM Sans',sans-serif;}
+.time-sep{font-size:20px;color:var(--cyan);margin-top:-6px;}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 24px 60px;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 50%,#020B18 30%,transparent 100%);background-color:#020B18;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,245,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,255,0.04) 1px,transparent 1px);background-size:40px 40px;}
+.glow-orb{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(0,245,255,0.1) 0%,transparent 70%);top:30%;left:50%;transform:translateX(-50%);animation:orb-pulse 4s ease-in-out infinite;}
+@keyframes orb-pulse{0%,100%{transform:translateX(-50%) scale(1);}50%{transform:translateX(-50%) scale(1.1);}}
+.eyebrow{position:relative;z-index:2;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:4px;color:var(--cyan);margin-bottom:16px;text-align:center;}
+.hero-title{position:relative;z-index:2;font-family:'Bebas Neue',sans-serif;font-size:80px;line-height:0.9;letter-spacing:2px;text-align:center;color:var(--ice);}
+.hero-title .accent{display:block;color:transparent;-webkit-text-stroke:1.5px var(--cyan);text-shadow:0 0 40px rgba(0,245,255,0.4);}
+.hero-sub{position:relative;z-index:2;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--silver);text-align:center;margin-top:10px;}
+
+/* PHONE MOCK */
+.phone-wrap{position:relative;z-index:2;margin:36px auto 0;width:170px;animation:float 5s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+.phone-mock{background:linear-gradient(155deg,#0D2E46,#061525);border-radius:36px;border:1px solid var(--cyan-dark);padding:14px 8px;box-shadow:0 0 60px rgba(0,245,255,0.12),0 30px 60px rgba(0,0,0,0.8);}
+.phone-screen{background:#010D1A;border-radius:26px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.scan-line{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(0,245,255,0.5),transparent);animation:scan 3s ease-in-out infinite;box-shadow:0 0 8px var(--cyan);}
+@keyframes scan{0%{top:5%;}100%{top:95%;}}
+.ph-ring{width:60px;height:60px;border-radius:50%;border:1px solid rgba(0,245,255,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:10px;}
+.ph-dot{width:8px;height:8px;background:var(--cyan);border-radius:50%;box-shadow:0 0 14px var(--cyan);}
+.ph-brand{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan);}
+.ph-model{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--ice);letter-spacing:2px;}
+.ph-ver{font-size:9px;letter-spacing:2px;color:var(--silver);}
+
+/* HERO CTA */
+.hero-cta{position:relative;z-index:2;width:100%;margin-top:36px;text-align:center;}
+.price-row{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-bottom:4px;}
+.price-old{font-family:'Orbitron',monospace;font-size:14px;color:#2A4A5A;text-decoration:line-through;}
+.price-new{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--cyan);text-shadow:0 0 30px rgba(0,245,255,0.5);line-height:1;}
+.price-save{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan-dim);margin-bottom:18px;}
+.btn-main{display:block;width:100%;padding:18px;background:transparent;border:1.5px solid var(--cyan);color:var(--cyan);font-family:'Orbitron',monospace;font-size:13px;font-weight:700;letter-spacing:2px;border-radius:3px;cursor:pointer;text-shadow:0 0 10px var(--cyan);box-shadow:0 0 20px rgba(0,245,255,0.08);-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.btn-sub-text{margin-top:8px;font-size:10px;color:#2A4A5A;letter-spacing:1px;}
+
+/* MARQUEE */
+.marquee-wrap{overflow:hidden;border-top:1px solid var(--navy-border);border-bottom:1px solid var(--navy-border);padding:10px 0;background:var(--navy-mid);}
+.marquee-inner{display:inline-flex;gap:32px;white-space:nowrap;animation:marquee 20s linear infinite;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan-dim);}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* SECTIONS */
+section{padding:50px 24px;}
+.sec-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:4px;color:var(--cyan);margin-bottom:10px;}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:2px;line-height:1;margin-bottom:6px;}
+.sec-title em{font-style:normal;color:var(--cyan);}
+.h-rule{width:40px;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);margin:0 auto 32px;box-shadow:0 0 8px var(--cyan);}
+
+/* PRODUCT DESC */
+.prod-box{background:var(--navy-card);border:1px solid rgba(0,245,255,0.2);border-radius:6px;padding:20px;margin-bottom:24px;text-align:center;position:relative;}
+.prod-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);}
+.prod-tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:3px;color:var(--silver);margin-bottom:8px;}
+.prod-name{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:3px;color:var(--ice);}
+.prod-ver{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan);margin:4px 0 14px;}
+.prod-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.chip{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;padding:5px 12px;border:1px solid rgba(0,245,255,0.25);border-radius:2px;color:var(--cyan);background:rgba(0,245,255,0.06);}
+
+/* SPECS */
+.specs-bg{background:var(--navy-mid);}
+.specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.spec-card{background:var(--navy-card);border:1px solid var(--navy-border);border-radius:4px;padding:16px 12px;}
+.spec-icon{font-size:22px;display:block;margin-bottom:8px;}
+.spec-val{font-family:'Orbitron',monospace;font-size:12px;font-weight:700;color:var(--cyan);line-height:1.2;}
+.spec-name{font-size:9px;letter-spacing:2px;color:var(--silver);margin-top:4px;text-transform:uppercase;}
+
+/* FEATURES */
+.features-bg{background:var(--navy);}
+.feat-item{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-bottom:1px solid rgba(0,245,255,0.06);}
+.feat-item:last-child{border-bottom:none;}
+.feat-num{font-family:'Bebas Neue',sans-serif;font-size:44px;line-height:1;color:rgba(0,245,255,0.08);min-width:44px;}
+.feat-body h3{font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--ice);letter-spacing:2px;margin-bottom:5px;}
+.feat-body p{font-size:12px;color:var(--silver);line-height:1.7;}
+
+/* REVIEWS */
+.reviews-bg{background:var(--navy-mid);}
+.rating-box{background:var(--navy-card);border:1px solid var(--navy-border);border-radius:4px;padding:20px;text-align:center;margin-bottom:18px;}
+.stars{font-size:18px;color:var(--cyan);letter-spacing:2px;margin-bottom:4px;}
+.big-rating{font-family:'Bebas Neue',sans-serif;font-size:64px;color:var(--cyan);line-height:1;}
+.rating-count{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;color:var(--silver);}
+.rev-card{background:var(--navy-card);border:1px solid var(--navy-border);border-left:2px solid var(--cyan);border-radius:4px;padding:18px;margin-bottom:12px;}
+.rev-text{font-size:12px;color:var(--silver);line-height:1.7;margin-bottom:12px;}
+.rev-footer{display:flex;align-items:center;gap:10px;}
+.rev-avatar{width:34px;height:34px;border-radius:3px;background:linear-gradient(135deg,var(--navy-border),var(--cyan-dark));border:1px solid var(--cyan-dark);display:flex;align-items:center;justify-content:center;font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--cyan);flex-shrink:0;}
+.rev-name{font-family:'Orbitron',monospace;font-size:10px;color:var(--ice);letter-spacing:1px;}
+.rev-loc{font-size:9px;color:#2A4A5A;margin-top:2px;}
+
+/* GUARANTEES */
+.guarantee-bg{background:var(--navy);}
+.g-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.g-card{background:var(--navy-card);border:1px solid var(--navy-border);border-radius:4px;padding:18px 12px;text-align:center;}
+.g-icon{font-size:26px;display:block;margin-bottom:8px;}
+.g-title{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;color:var(--cyan);letter-spacing:2px;margin-bottom:5px;}
+.g-desc{font-size:10px;color:var(--silver);line-height:1.5;}
+.g-badge{background:rgba(0,245,255,0.04);border:1px solid rgba(0,245,255,0.2);border-radius:4px;padding:18px;margin-top:14px;display:flex;align-items:center;gap:14px;}
+.g-badge-icon{font-size:32px;}
+.g-badge h3{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:2px;margin-bottom:5px;}
+.g-badge p{font-size:10px;color:var(--silver);line-height:1.5;}
+
+/* ORDER SECTION */
+.order-bg{background:radial-gradient(ellipse at 50% 0%,rgba(0,245,255,0.06) 0%,var(--navy) 70%);padding:50px 24px 80px;text-align:center;}
+.urgency-row{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:14px;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--red);}
+.alert-dot{width:6px;height:6px;background:var(--red);border-radius:50%;animation:blink 1s ease infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+.stock-bar-wrap{max-width:300px;margin:0 auto 6px;}
+.stock-bar{background:#0A1A25;border:1px solid var(--navy-border);border-radius:2px;height:6px;overflow:hidden;}
+.stock-fill{height:100%;width:23%;background:linear-gradient(90deg,var(--cyan-dark),var(--cyan));animation:pulse-fill 2s ease-in-out infinite;}
+@keyframes pulse-fill{0%,100%{opacity:1;}50%{opacity:0.6;}}
+.stock-label{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;color:#2A4A5A;margin-bottom:20px;}
+
+/* ORDER FORM */
+.order-form{background:var(--navy-card);border:1px solid var(--navy-border);border-radius:6px;padding:22px;margin-top:8px;text-align:left;}
+.form-title{font-family:'Orbitron',monospace;font-size:12px;font-weight:700;color:var(--cyan);letter-spacing:2px;margin-bottom:18px;text-align:center;}
+.form-group{margin-bottom:14px;}
+.form-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--silver);display:block;margin-bottom:6px;}
+.form-input{width:100%;background:var(--navy);border:1px solid var(--navy-border);color:var(--ice);font-family:'DM Sans',sans-serif;font-size:14px;padding:12px 14px;border-radius:3px;outline:none;-webkit-appearance:none;appearance:none;}
+.form-input:focus{border-color:var(--cyan-dark);}
+.form-input.err{border-color:var(--red);}
+.form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2300C4CC' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer;}
+.form-select option{background:var(--navy-card);color:var(--ice);}
+.form-textarea{resize:vertical;min-height:80px;}
+.form-error{font-family:'Orbitron',monospace;font-size:9px;color:var(--red);letter-spacing:1px;margin-top:4px;display:none;}
+
+/* PHONE NOTICE */
+.phone-notice{display:flex;align-items:flex-start;gap:10px;background:rgba(255,59,92,0.06);border:1px solid rgba(255,59,92,0.25);border-left:2px solid var(--red);border-radius:3px;padding:12px;margin-top:10px;}
+.notice-icon{font-size:15px;flex-shrink:0;}
+.notice-text{font-size:11px;color:#C08090;line-height:1.6;}
+.notice-text strong{color:#FF8099;font-weight:600;display:block;margin-bottom:2px;}
+
+/* WHATSAPP */
+.wa-label-row{display:flex;align-items:center;gap:6px;}
+.wa-req{font-size:8px;background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3);color:#25D366;padding:2px 6px;border-radius:2px;letter-spacing:1px;}
+.wa-wrap{display:flex;align-items:stretch;}
+.wa-prefix{display:flex;align-items:center;background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.25);border-right:none;border-radius:3px 0 0 3px;padding:0 12px;font-family:'Orbitron',monospace;font-size:12px;color:#25D366;white-space:nowrap;flex-shrink:0;}
+.wa-input{border-radius:0 3px 3px 0 !important;border-color:rgba(37,211,102,0.25) !important;flex:1;}
+.wa-notice{display:flex;align-items:flex-start;gap:10px;background:rgba(37,211,102,0.05);border:1px solid rgba(37,211,102,0.2);border-left:2px solid #25D366;border-radius:3px;padding:12px;margin-top:10px;}
+.wa-notice-icon{font-size:14px;flex-shrink:0;}
+.wa-notice-text{font-size:11px;color:#7ABFA0;line-height:1.6;}
+.wa-notice-text strong{color:#25D366;font-weight:600;display:block;margin-bottom:2px;}
+
+/* COLORS */
+.color-options{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;}
+.color-swatch{width:54px;height:54px;border-radius:6px;cursor:pointer;border:3px solid transparent;position:relative;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.color-swatch.selected{border-color:var(--cyan);box-shadow:0 0 12px rgba(0,245,255,0.5);}
+.color-swatch .ck{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:20px;opacity:0;}
+.color-swatch.selected .ck{opacity:1;}
+.color-swatch[data-color="black"]{background:linear-gradient(135deg,#111,#333);}
+.color-swatch[data-color="white"]{background:linear-gradient(135deg,#eee,#fff);}
+.color-swatch[data-color="blue"]{background:linear-gradient(135deg,#1a3a7a,#2563eb);}
+.color-swatch[data-color="orange"]{background:linear-gradient(135deg,#c2440a,#f97316);}
+.color-labels{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;}
+.color-label{width:54px;text-align:center;font-family:'Orbitron',monospace;font-size:7px;letter-spacing:1px;color:var(--silver);text-transform:uppercase;}
+.color-selected{margin-top:8px;font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;color:var(--cyan);min-height:16px;}
+
+/* QUANTITY */
+.qty-options{display:flex;gap:8px;margin-top:6px;}
+.qty-btn{flex:1;padding:14px 6px;background:var(--navy);border:2px solid var(--navy-border);color:var(--silver);border-radius:4px;cursor:pointer;text-align:center;-webkit-tap-highlight-color:transparent;touch-action:manipulation;user-select:none;}
+.qty-btn.selected{border-color:var(--cyan);background:rgba(0,245,255,0.08);}
+.qty-num{font-family:'Bebas Neue',sans-serif;font-size:28px;display:block;line-height:1;color:var(--ice);}
+.qty-btn.selected .qty-num{color:var(--cyan);}
+.qty-price{font-size:9px;letter-spacing:1px;color:var(--silver);display:block;margin-top:3px;font-family:'Orbitron',monospace;}
+.qty-tag{font-size:8px;letter-spacing:1px;color:var(--cyan);display:block;margin-top:2px;font-family:'Orbitron',monospace;}
+
+/* DELIVERY INFO */
+.delivery-note{display:flex;align-items:flex-start;gap:12px;background:rgba(0,245,255,0.04);border:1px solid rgba(0,245,255,0.15);border-radius:4px;padding:14px;}
+.delivery-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.delivery-note-title{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:2px;margin-bottom:4px;}
+.delivery-note-sub{font-size:11px;color:var(--silver);line-height:1.5;}
+.pickup-addr{background:rgba(0,245,255,0.03);border:1px solid var(--navy-border);border-left:2px solid var(--cyan);border-radius:3px;padding:12px;margin-top:10px;}
+.pa-label{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;color:var(--cyan);margin-bottom:5px;}
+.pa-address{font-size:12px;color:var(--ice);line-height:1.6;margin-bottom:6px;}
+.pa-hours{font-family:'Orbitron',monospace;font-size:9px;color:var(--silver);}
+
+/* DELIVERY TIMELINE */
+.timeline-box{background:rgba(0,245,255,0.04);border:1px solid rgba(0,245,255,0.15);border-radius:5px;padding:16px;margin-bottom:14px;}
+.timeline-title{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:2px;margin-bottom:12px;text-align:center;}
+.tl-row{display:flex;align-items:flex-start;gap:12px;padding:8px 0;}
+.tl-icon{font-size:18px;flex-shrink:0;margin-top:2px;}
+.tl-region{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;color:var(--ice);letter-spacing:1px;margin-bottom:2px;}
+.tl-time{font-size:12px;color:var(--cyan);font-weight:600;}
+.tl-divider{height:1px;background:rgba(0,245,255,0.08);}
+
+/* WARNING */
+.warning-box{background:rgba(255,59,92,0.06);border:1px solid rgba(255,59,92,0.3);border-left:3px solid var(--red);border-radius:5px;padding:16px;margin-bottom:14px;}
+.w-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.w-icon{font-size:20px;}
+.w-title{font-family:'Orbitron',monospace;font-size:11px;font-weight:900;color:var(--red);letter-spacing:2px;}
+.warning-box p{font-size:12px;color:#C08090;line-height:1.7;margin-bottom:6px;}
+.warning-box p strong{color:#FF8099;}
+.warning-box ul{margin:4px 0 8px 16px;}
+.warning-box ul li{font-size:12px;color:#C08090;line-height:1.8;}
+.w-final{font-size:11px;color:#A06070;border-top:1px solid rgba(255,59,92,0.15);padding-top:8px;margin-top:4px !important;}
+
+/* SUCCESS */
+.order-success{background:var(--navy-card);border:1px solid rgba(0,245,255,0.3);border-radius:6px;padding:28px 18px;text-align:center;margin-top:8px;display:none;}
+.success-icon{font-size:48px;display:block;margin-bottom:14px;}
+.success-title{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:3px;color:var(--cyan);margin-bottom:10px;}
+.success-sub{font-size:13px;color:var(--silver);line-height:1.7;margin-bottom:14px;}
+.success-detail{background:rgba(0,245,255,0.05);border:1px solid rgba(0,245,255,0.15);border-radius:4px;padding:14px;font-size:12px;color:var(--ice);line-height:1.8;text-align:left;}
+
+/* FOOTER */
+footer{background:var(--navy-mid);border-top:1px solid var(--navy-border);padding:28px 24px;text-align:center;}
+.foot-logo{font-family:'Orbitron',monospace;font-size:12px;letter-spacing:4px;color:var(--cyan);margin-bottom:12px;}
+.foot-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-bottom:12px;}
+.foot-links a{font-size:9px;color:#2A4A5A;text-decoration:none;letter-spacing:1px;font-family:'Orbitron',monospace;}
+.foot-copy{font-size:9px;color:#152030;letter-spacing:1px;font-family:'Orbitron',monospace;}
+
+/* TOAST */
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:99999;font-family:'Orbitron',monospace;font-size:11px;letter-spacing:1px;padding:12px 20px;border-radius:4px;max-width:90vw;text-align:center;opacity:0;transition:opacity 0.4s;pointer-events:none;}
+
+.hidden{display:none !important;}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<!-- TIMER -->
+<div class="timer-banner">
+  <div class="timer-label">DUBAI LAUNCH PRICE EXPIRES IN</div>
+  <div id="countdown">
+    <span class="time-block" id="th">00<span class="time-lbl">HRS</span></span>
+    <span class="time-sep">:</span>
+    <span class="time-block" id="tm">00<span class="time-lbl">MIN</span></span>
+    <span class="time-sep">:</span>
+    <span class="time-block" id="ts">00<span class="time-lbl">SEC</span></span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="glow-orb"></div>
+  <div class="eyebrow">ORIGINAL DUBAI VERSION &middot; 100% AUTHENTIC</div>
+  <h1 class="hero-title">GALAXY<br><span class="accent">S26 ULTRA</span></h1>
+  <p class="hero-sub">SAMSUNG &middot; ORIGINAL DUBAI EDITION</p>
+  <div class="phone-wrap">
+    <div class="phone-mock">
+      <div class="phone-screen">
+        <div class="scan-line"></div>
+        <div class="ph-ring"><div class="ph-dot"></div></div>
+        <div class="ph-brand">SAMSUNG</div>
+        <div class="ph-model">S26 ULTRA</div>
+        <div class="ph-ver">ORIGINAL DUBAI VERSION</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-cta">
+    <div class="price-row"><span class="price-old">220,000</span><span class="price-new">170,000</span></div>
+    <div class="price-save">// SAVE 50,000 + FREE DELIVERY //</div>
+    <button class="btn-main" onclick="scrollToOrder()">ORDER NOW &mdash; FREE DELIVERY</button>
+    <p class="btn-sub-text">SECURE CHECKOUT &middot; FREE DELIVERY ANYWHERE IN NIGERIA</p>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    OFFICIAL DUBAI EDITION &nbsp;&nbsp; FREE DELIVERY NATIONWIDE &nbsp;&nbsp; 2-YEAR WARRANTY &nbsp;&nbsp; 30-DAY RETURNS &nbsp;&nbsp; 100% AUTHENTIC &nbsp;&nbsp; ORIGINAL DUBAI VERSION &nbsp;&nbsp; FREE DELIVERY NATIONWIDE &nbsp;&nbsp; 2-YEAR WARRANTY &nbsp;&nbsp; 30-DAY RETURNS &nbsp;&nbsp; 100% AUTHENTIC &nbsp;&nbsp;
+  </div>
+</div>
+
+<!-- SPECS -->
+<section class="specs-bg">
+  <div class="sec-label">// HARDWARE OVERVIEW</div>
+  <h2 class="sec-title">BUILT TO <em>DOMINATE</em></h2>
+  <div class="prod-box reveal">
+    <div class="prod-tag">FULL PRODUCT NAME</div>
+    <div class="prod-name">Samsung Galaxy S26 Ultra</div>
+    <div class="prod-ver">Original Dubai Version</div>
+    <div class="prod-chips">
+      <span class="chip">1TB ROM</span>
+      <span class="chip">16GB RAM</span>
+      <span class="chip">8,000mAh</span>
+      <span class="chip">Original Dubai</span>
+    </div>
+  </div>
+  <div class="h-rule"></div>
+  <div class="specs-grid reveal">
+    <div class="spec-card"><span class="spec-icon">brain</span><div class="spec-val">Snapdragon 8 Elite 2</div><div class="spec-name">Processor</div></div>
+    <div class="spec-card"><span class="spec-icon">camera</span><div class="spec-val">200 MP</div><div class="spec-name">Main Camera</div></div>
+    <div class="spec-card"><span class="spec-icon">battery</span><div class="spec-val">8,000 mAh</div><div class="spec-name">Battery</div></div>
+    <div class="spec-card"><span class="spec-icon">screen</span><div class="spec-val">6.9" QHD+</div><div class="spec-name">Dynamic AMOLED</div></div>
+    <div class="spec-card"><span class="spec-icon">ram</span><div class="spec-val">16 GB RAM</div><div class="spec-name">Memory</div></div>
+    <div class="spec-card"><span class="spec-icon">storage</span><div class="spec-val">1 TB ROM</div><div class="spec-name">Storage</div></div>
+    <div class="spec-card"><span class="spec-icon">pen</span><div class="spec-val">S Pen</div><div class="spec-name">Built-in Stylus</div></div>
+    <div class="spec-card"><span class="spec-icon">ai</span><div class="spec-val">Galaxy AI 3.0</div><div class="spec-name">Artificial Intelligence</div></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-bg">
+  <div class="sec-label">// WHY DUBAI EDITION</div>
+  <h2 class="sec-title">BEYOND THE <em>STANDARD</em></h2>
+  <div class="h-rule"></div>
+  <div class="reveal">
+    <div class="feat-item"><div class="feat-num">01</div><div class="feat-body"><h3>TITANIUM ARMOR FRAME</h3><p>Aerospace-grade titanium chassis exclusive to the Dubai edition. Heavier, stronger, unmistakably premium in the hand.</p></div></div>
+    <div class="feat-item"><div class="feat-num">02</div><div class="feat-body"><h3>200MP NIGHTOGRAPHY</h3><p>The most advanced mobile camera ever made. 100x Space Zoom. AI-enhanced portraits. Even in complete darkness.</p></div></div>
+    <div class="feat-item"><div class="feat-num">03</div><div class="feat-body"><h3>8,000MAH MEGA BATTERY</h3><p>Massive 8,000mAh battery lasts 2 full days of heavy use. Fast charge from 0 to 100 in under 45 minutes.</p></div></div>
+    <div class="feat-item"><div class="feat-num">04</div><div class="feat-body"><h3>DUAL SIM &middot; DUAL 5G</h3><p>Genuine Dual SIM with independent 5G on both lines. Supports all Nigerian and global bands simultaneously.</p></div></div>
+    <div class="feat-item"><div class="feat-num">05</div><div class="feat-body"><h3>1TB STORAGE</h3><p>Never run out of space. Store thousands of 4K videos, photos, apps and files with 1 Terabyte of built-in storage.</p></div></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-bg">
+  <div class="sec-label">// VERIFIED BUYERS</div>
+  <h2 class="sec-title">THEY <em>CONFIRMED</em> IT</h2>
+  <div class="h-rule"></div>
+  <div class="rating-box reveal"><div class="stars">★ ★ ★ ★ ★</div><div class="big-rating">4.9</div><div class="rating-count">BASED ON 2,847 VERIFIED PURCHASES</div></div>
+  <div class="rev-card reveal"><div class="stars" style="font-size:13px;margin-bottom:8px;">★★★★★</div><p class="rev-text">I have used every Ultra model since the S22. The Dubai Edition is in a completely different league. The camera at night is absolutely unreal. I threw away my DSLR after the first week.</p><div class="rev-footer"><div class="rev-avatar">AK</div><div><div class="rev-name">AHMED K.</div><div class="rev-loc">DUBAI, UAE &middot; VERIFIED BUYER</div></div></div></div>
+  <div class="rev-card reveal"><div class="stars" style="font-size:13px;margin-bottom:8px;">★★★★★</div><p class="rev-text">The Dual SIM works perfectly. My Nigerian and UAE lines both run on 5G at the same time. The battery is insane. I charge once every 2 days. Worth every kobo.</p><div class="rev-footer"><div class="rev-avatar">CN</div><div><div class="rev-name">CHIDI N.</div><div class="rev-loc">LAGOS, NIGERIA &middot; VERIFIED BUYER</div></div></div></div>
+  <div class="rev-card reveal"><div class="stars" style="font-size:13px;margin-bottom:8px;">★★★★★</div><p class="rev-text">Fast delivery, arrived in 3 days to Abuja. The 1TB storage means I have never worried about space again. Galaxy AI is smarter than I expected. Insane phone.</p><div class="rev-footer"><div class="rev-avatar">PM</div><div><div class="rev-name">PRIYA M.</div><div class="rev-loc">ABUJA, NIGERIA &middot; VERIFIED BUYER</div></div></div></div>
+  <div class="rev-card reveal"><div class="stars" style="font-size:13px;margin-bottom:8px;">★★★★★</div><p class="rev-text">Battery lasts two full days. 5G is blazing fast on both MTN and Airtel at the same time. The screen is the best I have ever seen. No going back.</p><div class="rev-footer"><div class="rev-avatar">FR</div><div><div class="rev-name">FATIMA R.</div><div class="rev-loc">PORT HARCOURT &middot; VERIFIED BUYER</div></div></div></div>
+</section>
+
+<!-- GUARANTEES -->
+<section class="guarantee-bg">
+  <div class="sec-label">// OUR PROMISE</div>
+  <h2 class="sec-title">BUY WITH <em>ZERO RISK</em></h2>
+  <div class="h-rule"></div>
+  <div class="g-grid reveal">
+    <div class="g-card"><span class="g-icon">shield</span><div class="g-title">2-YEAR WARRANTY</div><div class="g-desc">Full Samsung international warranty covering all hardware defects.</div></div>
+    <div class="g-card"><span class="g-icon">return</span><div class="g-title">30-DAY RETURNS</div><div class="g-desc">Not satisfied? Return within 30 days for a full refund. No questions.</div></div>
+    <div class="g-card"><span class="g-icon">check</span><div class="g-title">100% AUTHENTIC</div><div class="g-desc">Sourced directly from Samsung Dubai. Serial number verified on delivery.</div></div>
+    <div class="g-card"><span class="g-icon">truck</span><div class="g-title">FREE DELIVERY</div><div class="g-desc">Free express delivery anywhere in Nigeria. Fully insured in transit.</div></div>
+  </div>
+  <div class="g-badge reveal">
+    <span class="g-badge-icon">shield</span>
+    <div><h3>BUYER PROTECTION</h3><p>If your device arrives damaged or is not authentic, we replace it immediately or refund 100% of your payment. No questions, no delays.</p></div>
+  </div>
+</section>
+
+<!-- ORDER SECTION -->
+<section class="order-bg" id="order">
+  <div class="sec-label">// LIMITED STOCK</div>
+  <h2 class="sec-title" style="margin-bottom:18px;">SECURE YOURS <em>NOW</em></h2>
+  <div class="urgency-row"><span class="alert-dot"></span>ONLY 11 UNITS REMAINING AT THIS PRICE</div>
+  <div class="stock-bar-wrap"><div class="stock-bar"><div class="stock-fill"></div></div></div>
+  <p class="stock-label">89% SOLD - DUBAI EDITION</p>
+  <div class="price-row" style="justify-content:center;margin-bottom:4px;"><span class="price-old">220,000</span><span class="price-new">170,000</span></div>
+  <div class="price-save" style="margin-bottom:16px;">// SAVE 50,000 + FREE DELIVERY //</div>
+
+  <div class="order-form" id="orderForm">
+    <div class="form-title">COMPLETE YOUR ORDER</div>
+
+    <div class="form-group">
+      <label class="form-label">FULL NAME</label>
+      <input type="text" class="form-input" id="fullName" placeholder="Enter your full name">
+      <div class="form-error" id="err-name">Please enter your full name</div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">EMAIL ADDRESS</label>
+      <input type="email" class="form-input" id="emailAddr" placeholder="e.g. yourname@gmail.com">
+      <div class="form-error" id="err-email">Please enter a valid email address</div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">PHONE NUMBER</label>
+      <input type="tel" class="form-input" id="phoneNum" placeholder="e.g. 08012345678">
+      <div class="form-error" id="err-phone">Please enter a valid phone number</div>
+      <div class="phone-notice">
+        <span class="notice-icon">warning</span>
+        <div class="notice-text"><strong>Important:</strong> Make sure this number is always reachable. Our agent will call you to confirm your order. Do not ignore the call.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label"><span class="wa-label-row">WHATSAPP NUMBER <span class="wa-req">REQUIRED</span></span></label>
+      <div class="wa-wrap">
+        <span class="wa-prefix">+234</span>
+        <input type="tel" class="form-input wa-input" id="whatsappNum" placeholder="e.g. 08012345678">
+      </div>
+      <div class="form-error" id="err-whatsapp">Please enter a valid WhatsApp number</div>
+      <div class="wa-notice">
+        <span class="wa-notice-icon">check</span>
+        <div class="wa-notice-text"><strong>Only valid WhatsApp numbers accepted.</strong> Your order confirmation and delivery updates will be sent here via WhatsApp.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">CHOOSE COLOR</label>
+      <div class="color-options">
+        <div class="color-swatch" data-color="black" id="sw-black"><span class="ck">check</span></div>
+        <div class="color-swatch" data-color="white" id="sw-white"><span class="ck" style="color:#333">check</span></div>
+        <div class="color-swatch" data-color="blue" id="sw-blue"><span class="ck">check</span></div>
+        <div class="color-swatch" data-color="orange" id="sw-orange"><span class="ck">check</span></div>
+      </div>
+      <div class="color-labels">
+        <div class="color-label">Black</div>
+        <div class="color-label">White</div>
+        <div class="color-label">Blue</div>
+        <div class="color-label">Orange</div>
+      </div>
+      <div class="color-selected" id="colorSelected">TAP A COLOR TO SELECT</div>
+      <div class="form-error" id="err-color">Please select a color</div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">QUANTITY</label>
+      <div class="qty-options">
+        <div class="qty-btn" id="qty1"><span class="qty-num">1</span><span class="qty-price">170,000</span><span class="qty-tag">STANDARD</span></div>
+        <div class="qty-btn" id="qty2"><span class="qty-num">2</span><span class="qty-price">340,000</span><span class="qty-tag">DUAL PACK</span></div>
+        <div class="qty-btn" id="qty3"><span class="qty-num">3</span><span class="qty-price">510,000</span><span class="qty-tag">FAMILY PACK</span></div>
+      </div>
+      <div class="form-error" id="err-qty">Please select a quantity</div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">SELECT YOUR STATE</label>
+      <select class="form-input form-select" id="stateSelect">
+        <option value="">-- Choose State --</option>
+        <option value="lagos">Lagos (Home Delivery)</option>
+        <option value="abia">Abia</option>
+        <option value="abuja">Abuja (FCT)</option>
+        <option value="adamawa">Adamawa</option>
+        <option value="anambra">Anambra</option>
+        <option value="akwaibom">Akwa Ibom</option>
+        <option value="bauchi">Bauchi</option>
+        <option value="bayelsa">Bayelsa</option>
+        <option value="benue">Benue</option>
+        <option value="borno">Borno</option>
+        <option value="crossriver">Cross River</option>
+        <option value="delta">Delta</option>
+        <option value="ebonyi">Ebonyi</option>
+        <option value="edo">Edo</option>
+        <option value="ekiti">Ekiti</option>
+        <option value="enugu">Enugu</option>
+        <option value="gombe">Gombe</option>
+        <option value="gusau">Gusau (Zamfara)</option>
+        <option value="imo">Imo</option>
+        <option value="jigawa">Jigawa</option>
+        <option value="kaduna">Kaduna</option>
+        <option value="kano">Kano</option>
+        <option value="katsina">Katsina</option>
+        <option value="kebbi">Kebbi</option>
+        <option value="kogi">Kogi</option>
+        <option value="kwara">Kwara</option>
+        <option value="nasarawa">Nasarawa</option>
+        <option value="niger">Niger</option>
+        <option value="ogun">Ogun</option>
+        <option value="ondo">Ondo</option>
+        <option value="osun">Osun</option>
+        <option value="oyo">Oyo</option>
+        <option value="plateau">Plateau</option>
+        <option value="rivers">Rivers</option>
+        <option value="sokoto">Sokoto</option>
+        <option value="taraba">Taraba</option>
+        <option value="yobe">Yobe</option>
+      </select>
+      <div class="form-error" id="err-state">Please select your state</div>
+    </div>
+
+    <div class="hidden" id="lagosBlock">
+      <div class="delivery-note">
+        <span class="delivery-icon">home</span>
+        <div><div class="delivery-note-title">HOME DELIVERY - LAGOS</div><div class="delivery-note-sub">We deliver directly to your door, free of charge.</div></div>
+      </div>
+      <label class="form-label" style="margin-top:12px;">DELIVERY ADDRESS</label>
+      <textarea class="form-input form-textarea" id="lagosAddress" placeholder="House no., street, area, LGA e.g. 12 Bode Thomas St, Surulere, Lagos"></textarea>
+      <div class="form-error" id="err-address">Please enter your delivery address</div>
+    </div>
+
+    <div class="hidden" id="pickupBlock">
+      <div class="delivery-note">
+        <span class="delivery-icon">pin</span>
+        <div><div class="delivery-note-title">SELECT PICKUP LOCATION</div><div class="delivery-note-sub">Choose your nearest outlet. We will call you when ready.</div></div>
+      </div>
+      <label class="form-label" style="margin-top:12px;">PICKUP OUTLET</label>
+      <select class="form-input form-select" id="pickupSelect">
+        <option value="">-- Choose Pickup Location --</option>
+      </select>
+      <div class="form-error" id="err-pickup">Please select a pickup location</div>
+      <div class="pickup-addr hidden" id="pickupAddrBox">
+        <div class="pa-label">OUTLET ADDRESS</div>
+        <div class="pa-address" id="pickupAddrText"></div>
+        <div class="pa-hours" id="pickupHoursText"></div>
+      </div>
+    </div>
+
+    <div class="timeline-box">
+      <div class="timeline-title">ESTIMATED DELIVERY TIME</div>
+      <div class="tl-row"><span class="tl-icon">bolt</span><div><div class="tl-region">Lagos</div><div class="tl-time">Few minutes - Same Day Delivery</div></div></div>
+      <div class="tl-divider"></div>
+      <div class="tl-row"><span class="tl-icon">box</span><div><div class="tl-region">South-West / South-East / South-South</div><div class="tl-time">2 - 3 Business Days</div></div></div>
+      <div class="tl-divider"></div>
+      <div class="tl-row"><span class="tl-icon">bank</span><div><div class="tl-region">Abuja (FCT)</div><div class="tl-time">3 - 4 Business Days</div></div></div>
+      <div class="tl-divider"></div>
+      <div class="tl-row"><span class="tl-icon">cal</span><div><div class="tl-region">Other Northern States</div><div class="tl-time">3 - 7 Business Days</div></div></div>
+    </div>
+
+    <div class="warning-box">
+      <div class="w-header"><span class="w-icon">stop</span><span class="w-title">SERIOUS BUYERS ONLY</span></div>
+      <p>This offer is strictly for <strong>ready and serious buyers only.</strong></p>
+      <p><strong>Do NOT order if you are:</strong></p>
+      <ul>
+        <li>Not ready to pay on delivery</li>
+        <li>Just testing or ordering for fun</li>
+        <li>Going to ignore our agent call</li>
+        <li>Not sure you want the product</li>
+      </ul>
+      <p class="w-final">Unserious orders waste everyone time. Our agents will <strong>blacklist</strong> numbers that repeatedly place fake orders. Only order if you are 100% ready.</p>
+    </div>
+
+    <button class="btn-main" id="confirmBtn" style="margin-top:8px;">
+      <span id="confirmBtnText">CONFIRM ORDER - N170,000</span>
+    </button>
+    <p class="btn-sub-text" style="margin-top:10px;">SSL ENCRYPTED &middot; SECURE PAYMENT &middot; WE WILL CALL TO CONFIRM</p>
+  </div>
+
+  <div class="order-success" id="orderSuccess">
+    <span class="success-icon">check</span>
+    <div class="success-title">ORDER RECEIVED!</div>
+    <div class="success-sub">Our team will call you within 30 minutes to confirm payment and arrange your pickup or delivery.</div>
+    <div class="success-detail" id="successDetail"></div>
+  </div>
+
+  <p style="font-size:9px;color:#1A3040;letter-spacing:2px;font-family:'Orbitron',monospace;margin-top:20px;">FREE DELIVERY &middot; 30-DAY RETURNS &middot; 2-YEAR WARRANTY</p>
+</section>
+
+<footer>
+  <div class="foot-logo">SAMSUNG GALAXY // DUBAI</div>
+  <div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Shipping</a><a href="#">Contact</a><a href="#">Returns</a></div>
+  <p class="foot-copy">2026 SAMSUNG GULF AUTHORIZED RESELLER</p>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+var LOCATIONS = {
+  abia:[{name:"Aba 1",address:"Asa Road, Former NITEL Building, Aba",hours:"Mon-Sat: 6am-7pm | Sun: 7am-3pm"},{name:"Aba 2",address:"30 Brass Street, G.R.A, After Jevinic Restaurant, Aba",hours:"Mon-Sat: 8am-7pm | Sun: Closed"},{name:"Umuahia 1",address:"8 Mission Hill, Opposite Villaroy Hotel, Umuahia",hours:"Mon-Sat: 6am-7pm | Sun: 7am-3pm"},{name:"Umuahia 2",address:"60 Aba Road, Close to MTN Office, Umuahia",hours:"Mon-Sat: 8am-7pm | Sun: Closed"}],
+  abuja:[{name:"Ademola Adetokunbo",address:"12 Nurnberger Platz, By Lobito Junction, Wuse 2",hours:"Mon-Sat: 7:30am-8pm | Sun: Closed"},{name:"Area 1",address:"SH 034, Area 1 Shopping Plaza, Area 1, Abuja",hours:"Mon-Sat: 8am-7pm | Sun: Closed"},{name:"Garki",address:"SICCONS Plaza, Opposite Unity House, Area 11, Garki",hours:"Mon-Sat: 7:30am-8pm | Sun: Closed"},{name:"Gwarinpa 1",address:"House 38, 3rd Avenue Gwarinpa, Opposite Union Bank",hours:"Mon-Sat: 7am-7pm | Sun: Closed"},{name:"Gwarinpa 2",address:"Suite A1, Bricks and More Plaza, 4th Avenue, Gwarinpa",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"},{name:"Gwagwalada",address:"Secretariat Road Beside WAEC, Opposite Aso-Oke Hotel, Gwagwalada",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"},{name:"Kubwa 1",address:"Opposite 2/2 Court Junction, Block 43, Gado Nasko Way, Kubwa",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"},{name:"Kubwa 2",address:"Opposite Ignobis Hotel, Plot 17, Gidan Dutse Layout, Kubwa",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"},{name:"Kubwa 3",address:"Kukwaba General Park, Kubwa",hours:"Mon-Sat: 7am-6pm | Sun: Closed"},{name:"Lugbe",address:"Shepherd-King Plaza, Beside Remaco Filling Station, Lugbe",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"},{name:"Madalla",address:"Mobil Filling Station, Along Zuba Expressway, Madalla",hours:"Mon-Sat: 7am-7pm | Sun: Closed"},{name:"Mararaba",address:"132 Giza Plaza, Opposite Chrisgold Plaza, Mararaba",hours:"Mon-Sat: 7am-7pm | Sun: Closed"},{name:"Nyanya",address:"Joy Plaza, Beside First Bank, Along Nyanya-Jikwoyi Road, Nyanya",hours:"Mon-Sat: 7:35am-7pm | Sun: Closed"},{name:"Utako 1 (24hrs)",address:"Plot 113, I.V.W. Osisiogu Street, Beside Utako Police Station, Utako",hours:"Open 24 Hours Every Day"},{name:"Utako 2",address:"Suite 3 and 4, Atlantic Mall, Ajose Adeogun Street, Utako",hours:"Mon-Sat: 7:30am-8pm | Sun: 7am-3pm"},{name:"Wuse 2",address:"80 Aminu Kano Crescent, Opposite Sherif Plaza, Wuse 2",hours:"Mon-Sat: 7:30am-8pm | Sun: Closed"},{name:"Zuba",address:"206 Zuba Market, Opposite Lagos Line, Zuba",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"}],
+  adamawa:[{name:"Yola",address:"Plot 2, Bekaji Plaza, Bekaji Karewa Road, Jimeta, Yola",hours:"Mon-Sat: 8am-6pm | Sun: Closed"}],
+  anambra:[{name:"Awka",address:"Elite Shopping Complex, Opposite Crunchies Fries, Enugu/Onitsha Expressway, Awka",hours:"Mon-Sat: 6am-6pm | Sun: 6am-3pm"},{name:"Nnewi",address:"73 Owerri Road, Martina Chukwuma Plaza, Umudim, Nnewi",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"Onitsha",address:"2 Awka Road, By DMGS Junction, Onitsha",hours:"Mon-Sat: 8am-6pm | Sun: 10am-3pm"}],
+  akwaibom:[{name:"Eket",address:"92 Marina Road, Opposite Royalty Hotel, Eket",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"Uyo 1",address:"3 Monsignor Akpan Avenue, Itam Industrial Layout, Itam",hours:"Mon-Sat: 6am-7pm | Sun: 7am-3pm"},{name:"Uyo 2",address:"108 Oron Road, Beside First Bank, Uyo",hours:"Mon-Sat: 8am-7pm | Sun: Closed"}],
+  bauchi:[{name:"Bauchi",address:"Shop 7, Mai Jamaa Plaza, Opposite Gwaram and Sons Plaza, Yandoka Road, Bauchi",hours:"Mon-Sat: 8am-6pm | Sun: Closed"}],
+  bayelsa:[{name:"Yenagoa 1",address:"Kpansia Epia, Opposite Wema Bank, By INEC Junction, Yenogoa",hours:"Mon-Sat: 6am-6pm | Sun: 7am-3pm"},{name:"Yenagoa 2",address:"Beside Phone Headquarters, Tamic Road Junction, Okutukutu, Yenegoa",hours:"Mon-Sat: 7am-7pm | Sun: 7am-3pm"}],
+  benue:[{name:"Makurdi",address:"4 Old Otukpo Road, Opposite Desters, By Savannah Roundabout",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"}],
+  borno:[{name:"Maiduguri",address:"10A Golden Plaza, Opposite Elkanemi College, Jos Road, Maiduguri",hours:"Mon-Sat: 8am-6pm | Sun: Closed"}],
+  crossriver:[{name:"Calabar 1",address:"29 Ndidem Usang Iso Road, Calabar",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"Calabar 2",address:"74 Eta Agbor Road, Beside UNICAL, Opposite MTN Office, Calabar",hours:"Mon-Sat: 6am-7pm | Sun: 7am-3pm"}],
+  delta:[{name:"Asaba 1",address:"Asaba-Onitsha Expressway, By Head Bridge",hours:"Mon-Sat: 7am-6pm | Sun: 7am-3pm"},{name:"Asaba 2",address:"445 Nnebisi Road, Opposite Zenith Bank, Asaba",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"Asaba 3",address:"Suite 53/54 Independence Mall, Okpanam Road, Asaba",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"Ughelli",address:"6B Uduere/Agbara Road, Off Ughelli-Warri Expressway, Ughelli",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"},{name:"Warri 2",address:"116 Effurun-Sapele Warri Road, Effurun",hours:"Mon-Sat: 7am-6pm | Sun: 7am-3pm"},{name:"Warri-Effurun",address:"Shop 5, Eku Plaza, 128 Effurun-Sapele Road, By 7UP Bus Stop",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"}],
+  ebonyi:[{name:"Abakaliki",address:"Central Park, Opposite International Market, Abakaliki",hours:"Mon-Sat: 7am-6pm | Sun: 7am-3pm"}],
+  edo:[{name:"Airport Road Benin",address:"Shop 1, Omegatron Plaza, 47 Airport Road, Benin City",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"Akpakpava",address:"112 Akpakpava Road, Benin City",hours:"Mon-Sat: 6am-6pm | Sun: 7am-3pm"},{name:"Auchi",address:"Opposite Auchi Polytechnic Sport Complex, Auchi-Okene Expressway, Auchi",hours:"Mon-Sat: 6am-6pm | Sun: 7am-3pm"},{name:"Ekpoma",address:"Along Benin-Auchi Expressway, Beside Big Joe Park, Ekpoma",hours:"Mon-Sat: 6am-6pm | Sun: 7am-3pm"},{name:"Ramat Park",address:"42 Benin-Agbor Road, EcoBus Park, Ramat, Benin City",hours:"Mon-Sat: 7am-6pm | Sun: 7am-3pm"},{name:"Sapele Road",address:"131 Benin Sapele Road, Beside Genesis Restaurant, Benin City",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"Uselu",address:"202 Uselu-Lagos Road, Ugbowo, Benin City",hours:"Mon-Sat: 6am-6pm | Sun: 7am-3pm"}],
+  ekiti:[{name:"Ado Ekiti",address:"Soladola Filling Station, Beside APC Secretariat, Along Ikere Road, Ajilosun",hours:"Mon-Sat: 7:30am-6:30pm | Sun: Closed"}],
+  enugu:[{name:"Enugu 1",address:"No. 1 P and T Quarters, Market Road, Opposite Osisatech Polytechnic, Enugu",hours:"Mon-Sat: 7am-7pm | Sun: 7am-3pm"},{name:"Enugu 2",address:"67 Zik Avenue, Uwani, Enugu",hours:"Mon-Sat: 7:30am-6pm | Sun: 8am-3pm"},{name:"Nsukka",address:"64 Owerrani, Enugu Road, Nsukka",hours:"Mon-Sat: 7am-6pm | Sun: 7am-3pm"}],
+  gombe:[{name:"Gombe",address:"Shop 4, El-Zaks Plaza, Opposite Conoil Filling Station, Ashaka Road, Gombe",hours:"Mon-Sat: 8am-6pm | Sun: Closed"}],
+  gusau:[{name:"Gusau",address:"C1, A.A. Master Plaza, Canteen Road, Gusau",hours:"Mon-Sat: 8am-6pm | Sun: Closed"}],
+  imo:[{name:"Owerri 1",address:"Plot C31, Relief Road, By Relief Junction, Off Egbu Road, Owerri",hours:"Mon-Sat: 6:30am-7:30pm | Sun: 7am-3pm"},{name:"Owerri 2",address:"Odonko Plaza, No. 7 Nwaturuocha Street, Ikenegbu, Owerri",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"Owerri 3",address:"Shop 9, Lion Yard Plaza, Federal Housing Estate, Along Umuguma Road, New Owerri",hours:"Mon-Sat: 8am-6pm | Sun: Closed"}],
+  jigawa:[{name:"Dutse",address:"Government House Roundabout, Asamau House, Block B, Number 8, Dutse",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"}],
+  kaduna:[{name:"Kaduna 1",address:"Jos Road Plaza, 19/20 Jos Road, By Ahmadu Bello Way, Kaduna",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"},{name:"Kaduna 2",address:"Shop A04, No. 6 Gidanbu Plaza, Kaduna-to-Lagos Road, Kaduna",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"},{name:"Kaduna 3",address:"Nnamdi Azikiwe Expressway, By Command Junction, Close to Samrada Filling Station",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"},{name:"Zaria",address:"Shop 2, D2 Plaza, No. 18 Sokoto Road, Sabon Gari, Zaria",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"}],
+  kano:[{name:"Kano 1",address:"1 Bompai Road, By Tafawa Balewa Way, Opposite Dominos Pizza, Kano",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"},{name:"Kano 2",address:"Shop 2 and 3, Centro Plaza, Opposite BUK Old Site, Kabuga, Kano",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"},{name:"Kano 3",address:"Khadijah House, Zaria Road, Opposite Kano State House of Assembly",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"}],
+  katsina:[{name:"Katsina",address:"Abudullahi Sarki Muktar Road, Along Kiddies Roundabout, Katsina",hours:"Mon-Sat: 7am-6pm | Sun: Closed"}],
+  kebbi:[{name:"Birnin Kebbi",address:"Ahmadu Bello Way, Opposite Alhaji Boye Coca-Cola Depot, Birnin Kebbi",hours:"Mon-Sat: 8am-6pm | Sun: Closed"}],
+  kogi:[{name:"Lokoja",address:"1 IBB Way, Adankolo, Lokoja, Close to Federal Medical Center",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"}],
+  kwara:[{name:"Ilorin 1",address:"151 Ibrahim Taiwo Road, Adjacent Chicken Republic, Ilorin",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"},{name:"Ilorin 2",address:"34B University of Ilorin Road, Beside Reo Cakes Plaza, Tanke, Ilorin",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"}],
+  nasarawa:[{name:"Lafia",address:"Shops 1 and 2, Police Officers Mess, Opposite Polaris Bank, Jos Road, Lafia",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"}],
+  niger:[{name:"Minna",address:"After Mr Biggs, Beside NEPA Office, Farm Center Area, Tunga, Minna",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"}],
+  ogun:[{name:"Abeokuta",address:"62 Tinubu Street, Ita Eko, Abeokuta",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"},{name:"Abeokuta FUNAAB",address:"Block A, Shop 9, SSANU Complex, Beside Paradise, FUNAAB, Abeokuta",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"},{name:"Ijebu Ode",address:"102 Ibadan Road, Opposite NEPA Office, Ibadan Garage, Ijebu Ode",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"},{name:"Magboro",address:"Joldre Plaza, Opposite Diva Cakes, Along Magboro Road",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"Sango Otta",address:"3 Abeokuta-Lagos Expressway, Beside 9mobile Office, Opposite Sango Bridge, Sango Ota",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"}],
+  ondo:[{name:"Akure",address:"22 Oyemekun Road, Opposite SLOT, Akure",hours:"Mon-Sat: 7:30am-6:30pm | Sun: Closed"},{name:"Ondo Town",address:"30 Yaba Street, Opposite Crunchies, Ondo Town",hours:"Mon-Sat: 7:30am-6:30pm | Sun: Closed"}],
+  osun:[{name:"Ile-Ife",address:"EXODUS Filling Station, Opposite Airtel Office, Mayfair, Ile-Ife",hours:"Mon-Sat: 7:30am-6:30pm | Sun: Closed"},{name:"Osogbo",address:"KM 3, Gbongan-Ibadan Road, NIPCO Filling Station, Ogo Oluwa, Osogbo",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"}],
+  oyo:[{name:"Ibadan 1 Ring Road",address:"Town Planning Complex, By Sumal Foods, Ring Road, Ibadan",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"},{name:"Ibadan 2 Bodija",address:"Suite 5, Kamal Memorial Plaza, Bodija-UI Road, UI, Ibadan",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"},{name:"Ibadan 3 Iwo Road",address:"Bovas Filling Station, 106/107 Agbaakin Layout, Iwo Road, Ibadan",hours:"Mon-Sat: 7:30am-7pm | Sun: Closed"},{name:"Ogbomoso",address:"Eterna Filling Station, Opposite Zenith Bank, Starlight, Ogbomoso",hours:"Mon-Sat: 7:30am-6:30pm | Sun: Closed"}],
+  plateau:[{name:"Jos 1",address:"Plaza 1080, Yakubu Gowon Way, Dadin Kowa Second Gate",hours:"Mon-Sat: 8am-7pm | Sun: Closed"},{name:"Jos 2",address:"Opposite Jankwano, Bingham University Teaching Hospital, Jos",hours:"Mon-Sat: 8am-7pm | Sun: 8am-2pm"}],
+  rivers:[{name:"PHC Ada George",address:"18 Ada George, By Okilton Junction, Port Harcourt",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"PHC Alakahia",address:"Linus Book Shop Building, Beside Today FM Road, East-West Road",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"PHC Artillery",address:"Cocaine Village Junction, Off Aba Road, Opposite Genesis, Rumuogba",hours:"Mon-Sat: 6am-6pm | Sun: 8am-3pm"},{name:"PHC Elelenwo",address:"299 Old Refinery Road, By De-Young Junction, Elelenwo",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"PHC Eliozu",address:"Emmanuel Plaza, G.U. Ake Road, Beside Planet Filling Station, Eliozu",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"PHC Olu Obasanjo",address:"61 Olu Obasanjo Road, Opposite Olu Obasanjo Roundabout",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"PHC Peter Odili",address:"89 Peter Odili Road, Besides Eterna Filling Station",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"PHC Rukpokwu",address:"Big Treat Rukpokwu, KM 16 Airport Road, Port Harcourt",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"PHC Stadium Road",address:"9 Stadium Road, Beside Benjack, Port Harcourt",hours:"Mon-Sat: 7am-6pm | Sun: 8am-3pm"},{name:"PHC Tombia",address:"67 Tombia Ext, GRA, Port Harcourt",hours:"Mon-Sat: 8am-6pm | Sun: Closed"},{name:"PHC Woji",address:"Agora Plaza, 118 Woji Road, By Bodo Junction, GRA Phase 2",hours:"Mon-Sat: 8am-6pm | Sun: Closed"}],
+  sokoto:[{name:"Sokoto",address:"3/4 Maiduguri Road, Gawon Nama Area",hours:"Mon-Sat: 7am-6pm | Sun: Closed"}],
+  taraba:[{name:"Jalingo",address:"106 White Castle Plaza, Barde Way, Beside A.U.K. Kirbir Shopping Plaza, Jalingo",hours:"Mon-Sat: 7:30am-6pm | Sun: Closed"}],
+  yobe:[{name:"Damaturu",address:"Shop 2, Adhaza Plaza, Gashuwa Road, Damaturu",hours:"Mon-Sat: 8am-6pm | Sun: Closed"}]
+};
+
+var COLOR_NAMES = {black:'Titanium Black',white:'Phantom White',blue:'Titanium Blue',orange:'Titanium Orange'};
+var selectedColor = '';
+var selectedQty = 0;
+
+// COUNTDOWN
+(function(){
+  var KEY='s26timer2';
+  var end=localStorage.getItem(KEY);
+  if(!end){end=Date.now()+6*3600000+47*60000+33000;try{localStorage.setItem(KEY,end);}catch(e){}}
+  end=parseInt(end);
+  function pad(n){return String(n).padStart(2,'0');}
+  function tick(){
+    var diff=end-Date.now();
+    if(diff<=0){document.getElementById('th').childNodes[0].nodeValue='00';document.getElementById('tm').childNodes[0].nodeValue='00';document.getElementById('ts').childNodes[0].nodeValue='00';return;}
+    document.getElementById('th').childNodes[0].nodeValue=pad(Math.floor(diff/3600000));
+    document.getElementById('tm').childNodes[0].nodeValue=pad(Math.floor((diff%3600000)/60000));
+    document.getElementById('ts').childNodes[0].nodeValue=pad(Math.floor((diff%60000)/1000));
+  }
+  tick();setInterval(tick,1000);
+})();
+
+// SCROLL REVEAL
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
+  els.forEach(function(el){obs.observe(el);});
+})();
+
+// FB PIXEL
+if(typeof fbq!=='undefined'){fbq('track','ViewContent',{content_name:'Samsung Galaxy S26 Ultra Dubai Edition',value:170000,currency:'NGN'});}
+
+// SCROLL TO ORDER
+function scrollToOrder(){
+  document.getElementById('order').scrollIntoView({behavior:'smooth'});
+  setTimeout(function(){var el=document.getElementById('fullName');if(el)el.focus();},700);
+  if(typeof fbq!=='undefined'){fbq('track','AddToCart',{content_name:'Samsung Galaxy S26 Ultra Dubai Edition',value:170000,currency:'NGN'});}
+}
+
+// TOAST
+function showToast(msg,isErr){
+  var t=document.getElementById('toast');
+  t.textContent=msg;
+  t.style.background=isErr?'rgba(255,59,92,0.95)':'rgba(0,245,255,0.95)';
+  t.style.color=isErr?'#fff':'#020B18';
+  t.style.opacity='1';
+  clearTimeout(t._t);
+  t._t=setTimeout(function(){t.style.opacity='0';},3500);
+}
+
+// COLOR SELECT
+function pickColor(color){
+  document.querySelectorAll('.color-swatch').forEach(function(s){s.classList.remove('selected');});
+  var sw=document.querySelector('.color-swatch[data-color="'+color+'"]');
+  if(sw)sw.classList.add('selected');
+  selectedColor=color;
+  document.getElementById('colorSelected').textContent=COLOR_NAMES[color].toUpperCase()+' SELECTED';
+  document.getElementById('err-color').style.display='none';
+}
+
+// QTY SELECT
+function pickQty(qty){
+  document.querySelectorAll('.qty-btn').forEach(function(b){b.classList.remove('selected');});
+  document.getElementById('qty'+qty).classList.add('selected');
+  selectedQty=qty;
+  var total=(170000*qty).toLocaleString();
+  document.getElementById('confirmBtnText').textContent='CONFIRM ORDER - N'+total;
+  document.getElementById('err-qty').style.display='none';
+}
+
+// ATTACH EVENTS AFTER DOM READY
+window.addEventListener('load',function(){
+  // Color swatches
+  document.querySelectorAll('.color-swatch').forEach(function(sw){
+    sw.addEventListener('click',function(){pickColor(this.dataset.color);});
+    sw.addEventListener('touchend',function(e){e.preventDefault();pickColor(this.dataset.color);});
+  });
+
+  // Qty buttons
+  [1,2,3].forEach(function(q){
+    var btn=document.getElementById('qty'+q);
+    if(!btn)return;
+    btn.addEventListener('click',function(){pickQty(q);});
+    btn.addEventListener('touchend',function(e){e.preventDefault();pickQty(q);});
+  });
+
+  // Confirm button
+  var confirmBtn=document.getElementById('confirmBtn');
+  if(confirmBtn){
+    confirmBtn.addEventListener('click',submitOrder);
+    confirmBtn.addEventListener('touchend',function(e){e.preventDefault();submitOrder();});
+  }
+
+  // State select
+  var stateSelect=document.getElementById('stateSelect');
+  if(stateSelect)stateSelect.addEventListener('change',handleStateChange);
+
+  // Pickup select
+  var pickupSelect=document.getElementById('pickupSelect');
+  if(pickupSelect)pickupSelect.addEventListener('change',showPickupAddr);
+});
+
+// STATE CHANGE
+function handleStateChange(){
+  var state=document.getElementById('stateSelect').value;
+  document.getElementById('lagosBlock').classList.add('hidden');
+  document.getElementById('pickupBlock').classList.add('hidden');
+  document.getElementById('pickupAddrBox').classList.add('hidden');
+  if(!state)return;
+  if(state==='lagos'){
+    document.getElementById('lagosBlock').classList.remove('hidden');
+  } else {
+    document.getElementById('pickupBlock').classList.remove('hidden');
+    var sel=document.getElementById('pickupSelect');
+    sel.innerHTML='<option value="">-- Choose Pickup Location --</option>';
+    var locs=LOCATIONS[state]||[];
+    locs.forEach(function(loc,i){
+      var opt=document.createElement('option');
+      opt.value=i;
+      opt.textContent=loc.name;
+      sel.appendChild(opt);
+    });
+    if(locs.length===1){sel.value='0';showPickupAddr();}
+  }
+}
+
+function showPickupAddr(){
+  var state=document.getElementById('stateSelect').value;
+  var idx=document.getElementById('pickupSelect').value;
+  var box=document.getElementById('pickupAddrBox');
+  if(idx===''||!state){box.classList.add('hidden');return;}
+  var loc=LOCATIONS[state][parseInt(idx)];
+  document.getElementById('pickupAddrText').textContent=loc.address;
+  document.getElementById('pickupHoursText').textContent='Hours: '+loc.hours;
+  box.classList.remove('hidden');
+}
+
+// SUBMIT ORDER
+function submitOrder(){
+  var valid=true;
+  var firstErr=null;
+
+  var name=document.getElementById('fullName').value.trim();
+  var email=document.getElementById('emailAddr').value.trim();
+  var phone=document.getElementById('phoneNum').value.trim();
+  var whatsapp=document.getElementById('whatsappNum').value.trim();
+  var state=document.getElementById('stateSelect').value;
+
+  // Clear errors
+  ['err-name','err-email','err-phone','err-whatsapp','err-state','err-color','err-qty','err-address','err-pickup'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.style.display='none';
+  });
+  ['fullName','emailAddr','phoneNum','whatsappNum','stateSelect','lagosAddress','pickupSelect'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('err');
+  });
+
+  function markErr(errId,inputId){
+    var e=document.getElementById(errId);if(e)e.style.display='block';
+    var i=inputId?document.getElementById(inputId):null;
+    if(i){i.classList.add('err');if(!firstErr)firstErr=i;}
+    valid=false;
+  }
+
+  if(!name)markErr('err-name','fullName');
+  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))markErr('err-email','emailAddr');
+  if(!phone||phone.replace(/\D/g,'').length<10)markErr('err-phone','phoneNum');
+  if(!whatsapp||whatsapp.replace(/\D/g,'').length<10)markErr('err-whatsapp','whatsappNum');
+  if(!selectedColor)markErr('err-color',null);
+  if(!selectedQty)markErr('err-qty',null);
+  if(!state)markErr('err-state','stateSelect');
+
+  var deliveryDisplay='';
+  var deliveryTelegram='';
+
+  if(state==='lagos'){
+    var addr=document.getElementById('lagosAddress').value.trim();
+    if(!addr){markErr('err-address','lagosAddress');}
+    else{deliveryDisplay='Home Delivery Lagos: '+addr;deliveryTelegram='State: Lagos (Home Delivery)\nADDRESS: '+addr;}
+  } else if(state){
+    var idx=document.getElementById('pickupSelect').value;
+    if(idx===''){markErr('err-pickup','pickupSelect');}
+    else{
+      var loc=LOCATIONS[state][parseInt(idx)];
+      var stateName=document.getElementById('stateSelect').options[document.getElementById('stateSelect').selectedIndex].text;
+      deliveryDisplay='Pickup: '+loc.name+' | '+loc.address;
+      deliveryTelegram='State: '+stateName+'\nPICKUP: '+loc.name+'\nADDRESS: '+loc.address+'\nHOURS: '+loc.hours;
+    }
+  }
+
+  if(!valid){
+    showToast('Please fill all required fields',true);
+    if(firstErr)firstErr.scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+
+  var total=(170000*selectedQty).toLocaleString();
+  var colorName=COLOR_NAMES[selectedColor];
+
+  var msg='NEW ORDER - SAMSUNG S26 ULTRA DUBAI\n'
+    +'------------------------\n\n'
+    +'CUSTOMER DETAILS\n'
+    +'Name: '+name+'\n'
+    +'Phone: '+phone+'\n'
+    +'WhatsApp: +234'+whatsapp.replace(/^0/,'')+'\n'
+    +'Email: '+email+'\n\n'
+    +'ORDER DETAILS\n'
+    +'Product: Samsung Galaxy S26 Ultra - Original Dubai Version\n'
+    +'Specs: 1TB ROM / 16GB RAM / 8000mAh\n'
+    +'Colour: '+colorName+'\n'
+    +'Quantity: '+selectedQty+' unit'+(selectedQty>1?'s':'')+'\n\n'
+    +'PRICING\n'
+    +'Unit Price: N170,000\n'
+    +'Subtotal: N'+total+'\n'
+    +'Delivery Fee: N0\n'
+    +'GRAND TOTAL: N'+total+'\n\n'
+    +'DELIVERY INFO\n'
+    +deliveryTelegram+'\n\n'
+    +'------------------------\n'
+    +'Payment on Delivery\n'
+    +'Time: '+new Date().toLocaleString('en-NG',{timeZone:'Africa/Lagos'});
+
+  var btn=document.getElementById('confirmBtn');
+  var btnText=document.getElementById('confirmBtnText');
+  btn.disabled=true;
+  btnText.textContent='SENDING ORDER...';
+
+  if(typeof fbq!=='undefined'){fbq('track','InitiateCheckout',{value:170000*selectedQty,currency:'NGN',num_items:selectedQty});}
+
+  function showSuccess(){
+    if(typeof fbq!=='undefined'){fbq('track','Purchase',{value:170000*selectedQty,currency:'NGN',num_items:selectedQty,content_name:'Samsung Galaxy S26 Ultra Dubai Edition',content_type:'product',contents:[{id:'s26-ultra-dubai',quantity:selectedQty,item_price:170000}]});}
+    document.getElementById('orderForm').style.display='none';
+    var s=document.getElementById('orderSuccess');
+    s.style.display='block';
+    document.getElementById('successDetail').innerHTML=
+      '<strong>ORDER SUMMARY</strong><br><br>'
+      +'Name: '+name+'<br>'
+      +'Email: '+email+'<br>'
+      +'Phone: '+phone+'<br>'
+      +'WhatsApp: +234'+whatsapp.replace(/^0/,'')+'<br>'
+      +'Color: '+colorName+'<br>'
+      +'Quantity: '+selectedQty+' unit'+(selectedQty>1?'s':'')+'<br>'
+      +'Total: N'+total+'<br><br>'
+      +deliveryDisplay
+      +'<br><br>Payment: N'+total+' on collection/delivery';
+    s.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  fetch('https://api.telegram.org/bot8459239531:AAEfTpKkwf38LVVrnsNV03CiTi-WyQ9bxXw/sendMessage',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({chat_id:'5607424830',text:msg})
+  })
+  .then(function(r){return r.json();})
+  .then(function(d){console.log('Telegram:',d.ok);showSuccess();})
+  .catch(function(e){console.log('Error:',e);showSuccess();});
+}
+</script>
+</body>
+</html>
