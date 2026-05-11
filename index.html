@@ -37,12 +37,19 @@ html{scroll-behavior:smooth;}
 body{background:var(--navy);color:var(--ice);font-family:'DM Sans',sans-serif;max-width:480px;margin:0 auto;overflow-x:hidden;}
 
 /* TIMER */
-.timer-banner{background:#061A2E;border-bottom:1px solid var(--cyan-dark);text-align:center;padding:10px 16px;position:sticky;top:0;z-index:999;box-shadow:0 0 30px rgba(0,245,255,0.15);}
-.timer-label{font-family:'Orbitron',monospace;font-size:9px;color:var(--silver);margin-bottom:6px;letter-spacing:3px;}
-#countdown{display:inline-flex;gap:4px;align-items:center;}
-.time-block{background:rgba(0,245,255,0.07);border:1px solid var(--cyan-dark);padding:4px 8px;border-radius:3px;font-size:22px;font-weight:900;min-width:44px;color:var(--cyan);text-shadow:0 0 12px var(--cyan);font-family:'Orbitron',monospace;}
-.time-lbl{font-size:7px;letter-spacing:1px;color:var(--silver);display:block;font-family:'DM Sans',sans-serif;}
-.time-sep{font-size:20px;color:var(--cyan);margin-top:-6px;}
+.timer-banner{background:linear-gradient(90deg,#0D0005,#1A0008,#0D0005);border-bottom:2px solid var(--red);text-align:center;padding:12px 16px;position:sticky;top:0;z-index:999;box-shadow:0 0 30px rgba(255,59,92,0.3);animation:timer-bg-pulse 1.5s ease-in-out infinite;}
+@keyframes timer-bg-pulse{0%,100%{box-shadow:0 0 20px rgba(255,59,92,0.2);}50%{box-shadow:0 0 40px rgba(255,59,92,0.5);}}
+.timer-top-row{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:6px;}
+.timer-fire{font-size:14px;animation:shake 0.5s ease-in-out infinite;}
+@keyframes shake{0%,100%{transform:rotate(-8deg);}50%{transform:rotate(8deg);}}
+.timer-label{font-family:'Orbitron',monospace;font-size:9px;color:#FF8099;letter-spacing:3px;animation:blink-text 1s ease-in-out infinite;}
+@keyframes blink-text{0%,100%{opacity:1;}50%{opacity:0.5;}}
+#countdown{display:inline-flex;gap:6px;align-items:center;}
+.time-block{background:rgba(255,59,92,0.15);border:1px solid var(--red);padding:4px 10px;border-radius:3px;font-size:24px;font-weight:900;min-width:48px;color:#FF3B5C;text-shadow:0 0 16px rgba(255,59,92,0.8);font-family:'Orbitron',monospace;animation:num-pulse 1s ease-in-out infinite;}
+@keyframes num-pulse{0%,100%{text-shadow:0 0 10px rgba(255,59,92,0.6);}50%{text-shadow:0 0 24px rgba(255,59,92,1);}}
+.time-lbl{font-size:7px;letter-spacing:1px;color:#FF8099;display:block;font-family:'DM Sans',sans-serif;}
+.time-sep{font-size:22px;color:var(--red);margin-top:-6px;animation:blink-text 0.8s ease-in-out infinite;}
+.timer-bottom{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;color:#FF8099;margin-top:6px;}
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 24px 60px;overflow:hidden;}
@@ -233,6 +240,13 @@ section{padding:50px 24px;}
 .warning-box ul li{font-size:12px;color:#C08090;line-height:1.8;}
 .w-final{font-size:11px;color:#A06070;border-top:1px solid rgba(255,59,92,0.15);padding-top:8px;margin-top:4px !important;}
 
+/* EXTRA GUARANTEES */
+.extra-guarantees{margin-top:16px;display:flex;flex-direction:column;gap:12px;}
+.eg-item{display:flex;align-items:flex-start;gap:14px;background:rgba(0,245,255,0.03);border:1px solid rgba(0,245,255,0.12);border-left:3px solid var(--cyan);border-radius:4px;padding:16px;}
+.eg-icon{font-size:26px;flex-shrink:0;margin-top:2px;}
+.eg-title{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:1px;margin-bottom:6px;text-shadow:0 0 8px rgba(0,245,255,0.3);}
+.eg-text{font-size:12px;color:var(--silver);line-height:1.7;}
+
 /* SUCCESS */
 .order-success{background:var(--navy-card);border:1px solid rgba(0,245,255,0.3);border-radius:6px;padding:28px 18px;text-align:center;margin-top:8px;display:none;}
 .success-icon{font-size:48px;display:block;margin-bottom:14px;}
@@ -247,7 +261,23 @@ footer{background:var(--navy-mid);border-top:1px solid var(--navy-border);paddin
 .foot-links a{font-size:9px;color:#2A4A5A;text-decoration:none;letter-spacing:1px;font-family:'Orbitron',monospace;}
 .foot-copy{font-size:9px;color:#152030;letter-spacing:1px;font-family:'Orbitron',monospace;}
 
-/* TOAST */
+/* STOCK ALERT */
+.stock-alert-box{background:rgba(255,59,92,0.06);border:1px solid rgba(255,59,92,0.3);border-radius:6px;padding:16px;margin-bottom:16px;text-align:center;}
+.stock-alert-top{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px;}
+.stock-fire{font-size:18px;animation:shake 0.4s ease-in-out infinite;}
+.stock-alert-text{font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:#FF8099;letter-spacing:1px;}
+.stock-num{color:var(--red);font-size:16px;font-weight:900;text-shadow:0 0 10px rgba(255,59,92,0.6);}
+.stock-bar-wrap{margin:8px 0;}
+.stock-bar{background:#1A0008;border:1px solid rgba(255,59,92,0.2);border-radius:2px;height:8px;overflow:hidden;}
+.stock-fill{height:100%;width:93%;background:linear-gradient(90deg,#8B0000,var(--red));box-shadow:0 0 8px var(--red);animation:stock-pulse 1.5s ease-in-out infinite;}
+@keyframes stock-pulse{0%,100%{opacity:1;}50%{opacity:0.7;}}
+.stock-pct{font-family:'Orbitron',monospace;font-size:9px;color:var(--red);letter-spacing:1px;margin-top:6px;}
+.stock-watchers{font-size:11px;color:#FF8099;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:6px;}
+.watch-dot{width:8px;height:8px;background:#00FF88;border-radius:50%;box-shadow:0 0 8px #00FF88;animation:blink-text 1s ease-in-out infinite;flex-shrink:0;}
+
+/* URGENCY ROW */
+.urgency-row{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:14px;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--red);animation:blink-text 1.5s ease-in-out infinite;}
+.alert-dot{width:8px;height:8px;background:var(--red);border-radius:50%;animation:blink-text 0.8s ease-in-out infinite;box-shadow:0 0 8px var(--red);flex-shrink:0;}
 #toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:99999;font-family:'Orbitron',monospace;font-size:11px;letter-spacing:1px;padding:12px 20px;border-radius:4px;max-width:90vw;text-align:center;opacity:0;transition:opacity 0.4s;pointer-events:none;}
 
 .hidden{display:none !important;}
@@ -259,14 +289,17 @@ footer{background:var(--navy-mid);border-top:1px solid var(--navy-border);paddin
 
 <!-- TIMER -->
 <div class="timer-banner">
-  <div class="timer-label">DUBAI LAUNCH PRICE EXPIRES IN</div>
+  <div class="timer-top-row">
+    <span class="timer-fire">🔥</span>
+    <div class="timer-label">⚠️ OFFER EXPIRES IN — ORDER NOW BEFORE IT'S GONE!</div>
+    <span class="timer-fire">🔥</span>
+  </div>
   <div id="countdown">
-    <span class="time-block" id="th">00<span class="time-lbl">HRS</span></span>
-    <span class="time-sep">:</span>
     <span class="time-block" id="tm">00<span class="time-lbl">MIN</span></span>
     <span class="time-sep">:</span>
     <span class="time-block" id="ts">00<span class="time-lbl">SEC</span></span>
   </div>
+  <div class="timer-bottom">🚨 ONLY 7 UNITS LEFT — PRICE RETURNS TO ₦220,000 AFTER THIS! 🚨</div>
 </div>
 
 <!-- HERO -->
@@ -299,7 +332,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--navy-border);paddin
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-inner">
-    OFFICIAL DUBAI EDITION &nbsp;&nbsp; FREE DELIVERY NATIONWIDE &nbsp;&nbsp; 2-YEAR WARRANTY &nbsp;&nbsp; 30-DAY RETURNS &nbsp;&nbsp; 100% AUTHENTIC &nbsp;&nbsp; ORIGINAL DUBAI VERSION &nbsp;&nbsp; FREE DELIVERY NATIONWIDE &nbsp;&nbsp; 2-YEAR WARRANTY &nbsp;&nbsp; 30-DAY RETURNS &nbsp;&nbsp; 100% AUTHENTIC &nbsp;&nbsp;
+    OFFICIAL DUBAI EDITION &nbsp;&nbsp; FREE DELIVERY NATIONWIDE &nbsp;&nbsp; 1-YEAR WARRANTY &nbsp;&nbsp; 30-DAY RETURNS &nbsp;&nbsp; 100% AUTHENTIC &nbsp;&nbsp; ORIGINAL DUBAI VERSION &nbsp;&nbsp; FREE DELIVERY NATIONWIDE &nbsp;&nbsp; 1-YEAR WARRANTY &nbsp;&nbsp; 30-DAY RETURNS &nbsp;&nbsp; 100% AUTHENTIC &nbsp;&nbsp;
   </div>
 </div>
 
@@ -363,26 +396,82 @@ footer{background:var(--navy-mid);border-top:1px solid var(--navy-border);paddin
   <h2 class="sec-title">BUY WITH <em>ZERO RISK</em></h2>
   <div class="h-rule"></div>
   <div class="g-grid reveal">
-    <div class="g-card"><span class="g-icon">shield</span><div class="g-title">2-YEAR WARRANTY</div><div class="g-desc">Full Samsung international warranty covering all hardware defects.</div></div>
-    <div class="g-card"><span class="g-icon">return</span><div class="g-title">30-DAY RETURNS</div><div class="g-desc">Not satisfied? Return within 30 days for a full refund. No questions.</div></div>
-    <div class="g-card"><span class="g-icon">check</span><div class="g-title">100% AUTHENTIC</div><div class="g-desc">Sourced directly from Samsung Dubai. Serial number verified on delivery.</div></div>
-    <div class="g-card"><span class="g-icon">truck</span><div class="g-title">FREE DELIVERY</div><div class="g-desc">Free express delivery anywhere in Nigeria. Fully insured in transit.</div></div>
+    <div class="g-card"><span class="g-icon">🛡️</span><div class="g-title">1-YEAR WARRANTY</div><div class="g-desc">Full 1-year warranty covering all hardware defects. We've got you covered.</div></div>
+    <div class="g-card"><span class="g-icon">↩️</span><div class="g-title">30-DAY RETURNS</div><div class="g-desc">Not satisfied? Return within 30 days for a full refund. No questions.</div></div>
+    <div class="g-card"><span class="g-icon">✅</span><div class="g-title">100% AUTHENTIC</div><div class="g-desc">Sourced directly from Samsung Dubai. Serial number verified on delivery.</div></div>
+    <div class="g-card"><span class="g-icon">🚀</span><div class="g-title">FREE DELIVERY</div><div class="g-desc">Free express delivery anywhere in Nigeria. Fully insured in transit.</div></div>
+    <div class="g-card"><span class="g-icon">💰</span><div class="g-title">MONEY-BACK GUARANTEE</div><div class="g-desc">If your phone is not original or arrives damaged, get 100% of your money back. Zero risk.</div></div>
+    <div class="g-card"><span class="g-icon">📞</span><div class="g-title">AFTER-SALES SUPPORT</div><div class="g-desc">Our support team is available 7 days a week to assist you after your purchase.</div></div>
   </div>
+
+  <!-- MAIN GUARANTEE BADGE -->
   <div class="g-badge reveal">
-    <span class="g-badge-icon">shield</span>
-    <div><h3>BUYER PROTECTION</h3><p>If your device arrives damaged or is not authentic, we replace it immediately or refund 100% of your payment. No questions, no delays.</p></div>
+    <span class="g-badge-icon">🛡️</span>
+    <div><h3>1-YEAR WARRANTY INCLUDED</h3><p>Every Samsung S26 Ultra Dubai Edition comes with a full 1-year warranty. If your device develops any hardware fault within 1 year, we will repair or replace it. No stress, no excuses.</p></div>
+  </div>
+
+  <!-- EXTRA GUARANTEE BLOCKS -->
+  <div class="extra-guarantees reveal">
+
+    <div class="eg-item">
+      <div class="eg-icon">💯</div>
+      <div class="eg-body">
+        <div class="eg-title">100% SATISFACTION GUARANTEE</div>
+        <div class="eg-text">If you receive your phone and it is not exactly as described — wrong specs, wrong version, or any issue — we will replace it immediately or give you a full refund. No argument, no stress.</div>
+      </div>
+    </div>
+
+    <div class="eg-item">
+      <div class="eg-icon">🔒</div>
+      <div class="eg-body">
+        <div class="eg-title">SECURE PAYMENT GUARANTEE</div>
+        <div class="eg-text">You pay ONLY on delivery. We will never ask you to pay upfront or send money before you receive and verify your phone. Pay when it's in your hands.</div>
+      </div>
+    </div>
+
+    <div class="eg-item">
+      <div class="eg-icon">📦</div>
+      <div class="eg-body">
+        <div class="eg-title">SEALED BOX GUARANTEE</div>
+        <div class="eg-text">Your Samsung S26 Ultra Dubai Edition is delivered in its original sealed box with all accessories. If the seal is broken on arrival, reject it — we will send a replacement.</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- ORDER SECTION -->
 <section class="order-bg" id="order">
-  <div class="sec-label">// LIMITED STOCK</div>
-  <h2 class="sec-title" style="margin-bottom:18px;">SECURE YOURS <em>NOW</em></h2>
-  <div class="urgency-row"><span class="alert-dot"></span>ONLY 11 UNITS REMAINING AT THIS PRICE</div>
-  <div class="stock-bar-wrap"><div class="stock-bar"><div class="stock-fill"></div></div></div>
-  <p class="stock-label">89% SOLD - DUBAI EDITION</p>
-  <div class="price-row" style="justify-content:center;margin-bottom:4px;"><span class="price-old">220,000</span><span class="price-new">170,000</span></div>
-  <div class="price-save" style="margin-bottom:16px;">// SAVE 50,000 + FREE DELIVERY //</div>
+  <div class="sec-label">// ⚠️ CRITICAL — LIMITED STOCK ALERT</div>
+  <h2 class="sec-title" style="margin-bottom:14px;">SECURE YOURS <em>NOW</em></h2>
+
+  <!-- LIVE STOCK COUNTER -->
+  <div class="stock-alert-box">
+    <div class="stock-alert-top">
+      <span class="stock-fire">🔥</span>
+      <span class="stock-alert-text">ALMOST GONE — ONLY <span class="stock-num" id="stockNum">7</span> UNITS LEFT IN STOCK!</span>
+      <span class="stock-fire">🔥</span>
+    </div>
+    <div class="stock-bar-wrap">
+      <div class="stock-bar"><div class="stock-fill"></div></div>
+    </div>
+    <div class="stock-pct">▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 93% SOLD OUT — ONLY 7 REMAINING</div>
+    <div class="stock-watchers">
+      <span class="watch-dot"></span>
+      <span id="watcherCount">24</span> people are viewing this right now
+    </div>
+  </div>
+
+  <div class="urgency-row">
+    <span class="alert-dot"></span>
+    PRICE RETURNS TO ₦220,000 WHEN TIMER HITS ZERO
+  </div>
+
+  <div class="price-row" style="justify-content:center;margin-bottom:4px;">
+    <span class="price-old">₦220,000</span>
+    <span class="price-new">₦170,000</span>
+  </div>
+  <div class="price-save" style="margin-bottom:16px;">// YOU SAVE ₦50,000 + FREE DELIVERY //</div>
 
   <div class="order-form" id="orderForm">
     <div class="form-title">COMPLETE YOUR ORDER</div>
@@ -559,7 +648,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--navy-border);paddin
     <div class="success-detail" id="successDetail"></div>
   </div>
 
-  <p style="font-size:9px;color:#1A3040;letter-spacing:2px;font-family:'Orbitron',monospace;margin-top:20px;">FREE DELIVERY &middot; 30-DAY RETURNS &middot; 2-YEAR WARRANTY</p>
+  <p style="font-size:9px;color:#1A3040;letter-spacing:2px;font-family:'Orbitron',monospace;margin-top:20px;">FREE DELIVERY &middot; 30-DAY RETURNS &middot; 1-YEAR WARRANTY</p>
 </section>
 
 <footer>
@@ -614,24 +703,18 @@ var COLOR_NAMES = {black:'Titanium Black',white:'Phantom White',blue:'Titanium B
 var selectedColor = '';
 var selectedQty = 0;
 
-// COUNTDOWN — resets every 24hrs, always active
+// COUNTDOWN — 5 minutes, resets every time it hits zero
 (function(){
-  var DURATION = 24 * 3600000; // 24 hours
-  var KEY = 's26timer3';
+  var DURATION = 5 * 60 * 1000; // 5 minutes
+  var KEY = 's26timer5min';
   var stored = localStorage.getItem(KEY);
   var end;
 
-  if (!stored) {
-    // First visit — start fresh 24hr timer
+  if (!stored || Date.now() >= parseInt(stored)) {
     end = Date.now() + DURATION;
     try { localStorage.setItem(KEY, end); } catch(e) {}
   } else {
     end = parseInt(stored);
-    // If timer already expired — reset to a new 24hrs
-    if (Date.now() >= end) {
-      end = Date.now() + DURATION;
-      try { localStorage.setItem(KEY, end); } catch(e) {}
-    }
   }
 
   function pad(n){ return String(n).padStart(2,'0'); }
@@ -639,18 +722,15 @@ var selectedQty = 0;
   function tick(){
     var diff = end - Date.now();
     if (diff <= 0) {
-      // Timer hit zero — reset immediately to new 24hrs
+      // Reset to fresh 5 minutes
       end = Date.now() + DURATION;
       try { localStorage.setItem(KEY, end); } catch(e) {}
       diff = DURATION;
     }
-    var h = Math.floor(diff / 3600000);
     var m = Math.floor((diff % 3600000) / 60000);
     var s = Math.floor((diff % 60000) / 1000);
-    var th = document.getElementById('th');
     var tm = document.getElementById('tm');
     var ts = document.getElementById('ts');
-    if(th) th.childNodes[0].nodeValue = pad(h);
     if(tm) tm.childNodes[0].nodeValue = pad(m);
     if(ts) ts.childNodes[0].nodeValue = pad(s);
   }
@@ -891,24 +971,28 @@ function submitOrder(){
     currency:'NGN'
   });}
 
+  // ── FIRE PURCHASE EVENT IMMEDIATELY ──
+  // Fires as soon as customer submits — guaranteed every time
+  if(typeof fbq!=='undefined'){
+    fbq('track','Purchase',{
+      content_name:'Samsung Galaxy S26 Ultra — Original Dubai Version',
+      content_category:'Smartphones',
+      content_ids:['s26-ultra-dubai'],
+      content_type:'product',
+      num_items:selectedQty,
+      value:170000*selectedQty,
+      currency:'NGN',
+      contents:[{
+        id:'s26-ultra-dubai',
+        quantity:selectedQty,
+        item_price:170000,
+        title:'Samsung Galaxy S26 Ultra — Original Dubai Version (1TB/16GB/8000mAh)'
+      }]
+    });
+    console.log('Purchase event fired: NGN '+(170000*selectedQty));
+  }
+
   function showSuccess(){
-    if(typeof fbq!=='undefined'){
-      fbq('track','Purchase',{
-        content_name:'Samsung Galaxy S26 Ultra — Original Dubai Version',
-        content_category:'Smartphones',
-        content_ids:['s26-ultra-dubai'],
-        content_type:'product',
-        num_items:selectedQty,
-        value:170000*selectedQty,
-        currency:'NGN',
-        contents:[{
-          id:'s26-ultra-dubai',
-          quantity:selectedQty,
-          item_price:170000,
-          title:'Samsung Galaxy S26 Ultra Dubai Edition'
-        }]
-      });
-    }
     document.getElementById('orderForm').style.display='none';
     var s=document.getElementById('orderSuccess');
     s.style.display='block';
@@ -959,6 +1043,38 @@ function submitOrder(){
   // SAFETY NET: show success after 5 seconds no matter what
   setTimeout(onSent, 5000);
 }
+
+// LIVE STOCK + WATCHER COUNT SIMULATION
+(function(){
+  var stock = 7;
+  var watchers = 24;
+
+  function updateStock(){
+    var el = document.getElementById('stockNum');
+    if(el) el.textContent = stock;
+  }
+  function updateWatchers(){
+    var el = document.getElementById('watcherCount');
+    if(el) el.textContent = watchers;
+  }
+
+  // Drop stock count every 3-5 minutes randomly
+  function tickStock(){
+    if(stock > 2){ stock--; updateStock(); }
+    setTimeout(tickStock, (Math.random()*120000)+180000);
+  }
+
+  // Fluctuate watcher count every 10-20 seconds
+  function tickWatchers(){
+    var change = Math.floor(Math.random()*5)-2;
+    watchers = Math.max(14, Math.min(41, watchers+change));
+    updateWatchers();
+    setTimeout(tickWatchers, (Math.random()*10000)+8000);
+  }
+
+  setTimeout(tickStock, 300000);
+  setTimeout(tickWatchers, 10000);
+})();
 </script>
 </body>
 </html>
