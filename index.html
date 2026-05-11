@@ -14,6 +14,14 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1886492678709491');
 fbq('track','PageView');
+fbq('track','ViewContent',{
+  content_name:'Samsung Galaxy S26 Ultra Dubai Edition',
+  content_category:'Smartphones',
+  content_ids:['s26-ultra-dubai'],
+  content_type:'product',
+  value:170000,
+  currency:'NGN'
+});
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1886492678709491&ev=PageView&noscript=1"/></noscript>
 
@@ -630,14 +638,32 @@ var selectedQty = 0;
   els.forEach(function(el){obs.observe(el);});
 })();
 
-// FB PIXEL
-if(typeof fbq!=='undefined'){fbq('track','ViewContent',{content_name:'Samsung Galaxy S26 Ultra Dubai Edition',value:170000,currency:'NGN'});}
+// FB PIXEL EVENTS
+if(typeof fbq!=='undefined'){
+  fbq('track','ViewContent',{
+    content_name:'Samsung Galaxy S26 Ultra Dubai Edition',
+    content_category:'Smartphones',
+    content_ids:['s26-ultra-dubai'],
+    content_type:'product',
+    value:170000,
+    currency:'NGN'
+  });
+}
 
 // SCROLL TO ORDER
 function scrollToOrder(){
   document.getElementById('order').scrollIntoView({behavior:'smooth'});
   setTimeout(function(){var el=document.getElementById('fullName');if(el)el.focus();},700);
-  if(typeof fbq!=='undefined'){fbq('track','AddToCart',{content_name:'Samsung Galaxy S26 Ultra Dubai Edition',value:170000,currency:'NGN'});}
+  if(typeof fbq!=='undefined'){
+    fbq('track','AddToCart',{
+      content_name:'Samsung Galaxy S26 Ultra Dubai Edition',
+      content_category:'Smartphones',
+      content_ids:['s26-ultra-dubai'],
+      content_type:'product',
+      value:170000,
+      currency:'NGN'
+    });
+  }
 }
 
 // TOAST
@@ -827,10 +853,34 @@ function submitOrder(){
   btn.disabled=true;
   btnText.textContent='SENDING ORDER...';
 
-  if(typeof fbq!=='undefined'){fbq('track','InitiateCheckout',{value:170000*selectedQty,currency:'NGN',num_items:selectedQty});}
+  if(typeof fbq!=='undefined'){fbq('track','InitiateCheckout',{
+    content_name:'Samsung Galaxy S26 Ultra Dubai Edition',
+    content_category:'Smartphones',
+    content_ids:['s26-ultra-dubai'],
+    content_type:'product',
+    num_items:selectedQty,
+    value:170000*selectedQty,
+    currency:'NGN'
+  });}
 
   function showSuccess(){
-    if(typeof fbq!=='undefined'){fbq('track','Purchase',{value:170000*selectedQty,currency:'NGN',num_items:selectedQty,content_name:'Samsung Galaxy S26 Ultra Dubai Edition',content_type:'product',contents:[{id:'s26-ultra-dubai',quantity:selectedQty,item_price:170000}]});}
+    if(typeof fbq!=='undefined'){
+      fbq('track','Purchase',{
+        content_name:'Samsung Galaxy S26 Ultra — Original Dubai Version',
+        content_category:'Smartphones',
+        content_ids:['s26-ultra-dubai'],
+        content_type:'product',
+        num_items:selectedQty,
+        value:170000*selectedQty,
+        currency:'NGN',
+        contents:[{
+          id:'s26-ultra-dubai',
+          quantity:selectedQty,
+          item_price:170000,
+          title:'Samsung Galaxy S26 Ultra Dubai Edition'
+        }]
+      });
+    }
     document.getElementById('orderForm').style.display='none';
     var s=document.getElementById('orderSuccess');
     s.style.display='block';
